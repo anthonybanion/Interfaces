@@ -169,6 +169,8 @@ h1 {
         width: 100%;
     }
     .container__campo {
+        display: flex;
+        flex-direction: column;
         margin: 1rem;
     }
     .container__texto {
