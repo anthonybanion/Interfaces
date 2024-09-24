@@ -1,9 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-
     background: url('../img/codigo.svg'), linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
-
-
     background-size: auto;
     background-repeat: no-repeat;
     /* Hace que la imagen cubra todo el área del elemento */

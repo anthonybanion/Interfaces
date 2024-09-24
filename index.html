@@ -3,42 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main/assets/style/style.css">
     <title>Challenges</title>
 </head>
 <body>
     <header>
-        <h1>Challenges</h1>
+        <div class="header" id="header__logo">
+            <img class="header__logo" src="main/assets/img/challenge-1.png" width="100">
+        </div>  
+        <div class="header" id="header__title">
+            <h1 class="header__title">Challenges</h1>
+        </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="password_generator/password_generator.html">Password Generator</a></li>
-            <li><a href="expense_control/expense_control.html">Expense Control</a></li>
+    <!-- <nav>
+        <ul class="unordered__list">
+            <li class="unordered__list_item"><a href="password generator/password_generator.html">Password Generator</a></li>
+            <li class="unordered__list_item"><a href="expense control/expense_control.html">Expense Control</a></li>
         </ul>
-    </nav>
+    </nav> -->
     <main>
-        <h2>Challenges</h2>
-        <p>Here you can find a list of challenges that I have been working on.</p>
-        <article>
-            <h3>Password Generator</h3>
-            <p>Generate a random password with the length and characters that you want.</p>
-        </article>
-        <article>
-            <h3>Expense Control</h3>
-            <p>Control your monthly expenses with this simple app.</p>
-        </article>
+      <section class="section">
+        <div class="card" id="card__password_generator">
+            <img src="main/assets/img/password_generator.webp">
+            <!-- <h2>Password Generator</h2> -->
+            <a class="card__button" href="password generator/password_generator.html">Enter</a>
+        </div>
+        <div class="card" id="card__expense_control">
+            <img src="main/assets/img/expense_control.jpg">
+            <!-- <h2>Expense Control</h2> -->
+            <a class="card__button" href="expense control/expense_control.html">Enter</a>
+        </div>
+      </section>
     </main>
-    <section>
-        <p>promociones</p>
-    </section>
-    <aside>
-        <p>propaganda</p>
-    </aside>
     <footer>
-        <ul>
-            <li><a href=""></a> GitHub</li>
-            <li><a href=""></a> LinkedIn</li>
-            <li><a href=""></a> X</li>
-
+        <ul class="unordered__list">
+            <li><a href="https://github.com/anthonybanion/"><img src="main/assets/img/github.svg" width="20"></a></li>
+            <li ><a href="https://www.linkedin.com/in/anthonybanion/"><img src="main/assets/img/linkedin.png" width="20"></a></li>
+            <li ><a href="https://x.com/anthonybanionX/"><img src="main/assets/img/x.webp" width="20"></a> </li>
         </ul>
 
     </footer>
