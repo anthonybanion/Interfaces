@@ -1,47 +1,55 @@
+<!-- @Brief: This is the main page of the project.
+     @Date: 12/11/2024
+     @Version: 2.0
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main/assets/style/style.css">
+    <link rel="stylesheet" href="main/static/css/style.css">
     <title>Challenges</title>
 </head>
 <body>
-    <header>
-        <div class="header" id="header__logo">
-            <img class="header__logo" src="main/assets/img/challenge-1.png" width="100">
+    <header class="header">
+        <div class="header__logo-container">
+            <img class="header__logo" src="main/static/img/challenge-1.png">
         </div>  
-        <div class="header" id="header__title">
+        <div class="header__title-container">
             <h1 class="header__title">Challenges</h1>
         </div>
     </header>
-    <!-- <nav>
-        <ul class="unordered__list">
-            <li class="unordered__list_item"><a href="password generator/password_generator.html">Password Generator</a></li>
-            <li class="unordered__list_item"><a href="expense control/expense_control.html">Expense Control</a></li>
-        </ul>
-    </nav> -->
-    <main>
-      <section class="section">
-        <div class="card" id="card__password_generator">
-            <img src="main/assets/img/password_generator.webp">
-            <!-- <h2>Password Generator</h2> -->
-            <a class="card__button" href="password generator/password_generator.html">Enter</a>
-        </div>
-        <div class="card" id="card__expense_control">
-            <img src="main/assets/img/expense_control.jpg">
-            <!-- <h2>Expense Control</h2> -->
-            <a class="card__button" href="expense control/expense_control.html">Enter</a>
-        </div>
+    <main class="main">
+      <section class="main__card-containers">
+        
+        <article class="card">
+            <header class="card__header">
+                <h2 class="card__title">Password Generator</h2>
+            </header>
+            <img class="card__img" src="main/static/img/password_generator.webp">
+            <footer class="card__footer">
+                <a class="card__link" href="password_generator/password_generator.html"><input class="card__button" type="button" value="Password Generator"></a>
+            </footer>
+        </article>
+        <article class="card">
+            <header class="card__header">
+                <h2 class="card__title">Expense Control</h2>
+            </header>
+            <img class="card__img" src="main/static/img/expense_control.jpg">
+            <footer class="card__footer">
+                <a class="card__link" href="expense_control/expense_control.html"><input class="card__button" type="button" value="Expense Control"></a>
+            </footer>
+        </article>
+
       </section>
     </main>
-    <footer>
-        <ul class="unordered__list">
-            <li><a href="https://github.com/anthonybanion/"><img src="main/assets/img/github.svg" width="20"></a></li>
-            <li ><a href="https://www.linkedin.com/in/anthonybanion/"><img src="main/assets/img/linkedin.png" width="20"></a></li>
-            <li ><a href="https://x.com/anthonybanionX/"><img src="main/assets/img/x.webp" width="20"></a> </li>
+    <footer class="footer">
+        <ul class="footer__pages">
+            <li class="footer__items"><a class="footer__link" href="https://github.com/anthonybanion/"><img class="footer__img" src="main/static/img/github.svg" width="20"></a></li>
+            <li class="footer__items"><a class="footer__link" href="https://www.linkedin.com/in/anthonybanion/"><img class="footer__img" src="main/static/img/linkedin.png" width="20"></a></li>
+            <li class="footer__items"><a class="footer__link" href="https://x.com/anthonybanionX/"><img class="footer__img" src="main/static/img/x.webp" width="20"></a></li>
         </ul>
-
     </footer>
 </body>
 </html>
