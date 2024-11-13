@@ -88,15 +88,65 @@ function cleanStudent(student) {
 // Función para modificar (editar) un estudiante
 function modifyStudent(student) {
     // Esta es solo una estructura básica, puedes personalizarla según tus necesidades
-    const name = prompt("Edit Name:", student.name);
-    if (name !== null) {
-        student.name = name;
+    // Por ejemplo, puedes usar un formulario modal para editar los datos del estudiante
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    const form = document.createElement('form');
+    form.classList.add('modal__form');
+
+    // Create input fields for each property of the student
+    for (const key in student) {
+        const label = document.createElement('label');
+        label.textContent = key;
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = student[key];
+        input.name = key;
+        label.appendChild(input);
+        form.appendChild(label);
     }
 
-    const lastName = prompt("Edit Last Name:", student.lastName);
-    if (lastName !== null) {
-        student.lastName = lastName;
-    }
+    // Create submit button
+    const submitButton = document.createElement('input');
+    submitButton.type = 'submit';
+    submitButton.value = 'Save';
+    form.appendChild(submitButton);
+
+    // Add form to modal
+    modal.appendChild(form);
+
+    // Add modal to the document body
+    document.body.appendChild(modal);
+
+    // Handle form submission
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        // Update student object with form values
+        for (const key in student) {
+            student[key] = form.elements[key].value;
+        }
+
+        // Update localStorage and show updated table
+        localStorage.setItem('students', JSON.stringify(students));
+        showStudents();
+
+        // Remove modal from the document body
+        document.body.removeChild(modal);
+    });
+
+
+
+    // const name = prompt("Edit Name:", student.name);
+    // if (name !== null) {
+    //     student.name = name;
+    // }
+
+    // const lastName = prompt("Edit Last Name:", student.lastName);
+    // if (lastName !== null) {
+    //     student.lastName = lastName;
+    // }
 
     // Deberías seguir para las otras propiedades, como `dni`, `email`, `phone`, `address`, etc.
 
