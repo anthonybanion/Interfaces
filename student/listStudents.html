@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="static/css/globalStyle.css">
+    <link rel="stylesheet" href="static/css/table.css">
     <title>List students</title>
 </head>
 <body>
@@ -17,41 +18,21 @@
             <li class="browser__items"><a class="browser__link" href="searchStudent.html">Search student</a></li>
         </ul>
     </nav>
-    <main></main>
+    <main class="main">
         <section class="table-container">
             <table class="table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Last Name</th>
-                        <th>Dni</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Address</th>
-                        <th></th>
+                <thead class="table__head">
+                    <tr class="table__title-row">
+                        <th class="table__title-head">Name</th>
+                        <th class="table__title-head">Last Name</th>
+                        <th class="table__title-head">Dni</th>
+                        <th class="table__title-head">Email</th>
+                        <th class="table__title-head">Phone</th>
+                        <th class="table__title-head">Address</th>
+                        <th class="table__title-head">Buttons</th>
                     </tr>
                 </thead>
-                <tbody id="list__body">
-                    <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>12345678A</td>
-                        <td>jhon@gmail</td>
-                        <td>123456789</td>
-                        <td>Street 1</td>
-                        <td><input type="button" value="Clean">
-                            <input type="button" value="Modify"></td>
-                    </tr>
-                    <tr>
-                        <td>Jane</td>
-                        <td>Doe</td>
-                        <td>12345678B</td>
-                        <td>jane@gmail</td>
-                        <td>123456789</td>
-                        <td>Street 2</td>
-                        <td><input type="button" value="Clean">
-                            <input type="button" value="Modify"></td>
-                    </tr>
+                <tbody id="table__body">
                     
                 </tbody>
             </table>
@@ -59,10 +40,10 @@
     </main>
     <footer class="footer">
         <ul class="footer__pages">
-            <li class="footer__items"><a class="footer__link" href="http://www.i12.com.ar/i12/"><img class="footer__img" src="assets/img/i12.png" alt="5px"></a></li>
-            <li class="footer__items"><a class="footer__link" href="https://github.com/anthonybanion"><img class="footer__img" src="assets/img/github.jpg" alt="5px"></a></li>
+            <li class="footer__items"><a class="footer__link" href="http://www.i12.com.ar/i12/"><img class="footer__img" src="static/img/i12.png" alt="5px"></a></li>
+            <li class="footer__items"><a class="footer__link" href="https://github.com/anthonybanion"><img class="footer__img" src="static/img/github.jpg" alt="5px"></a></li>
         </ul>
     </footer>
-    <script src="assets/js/script.js"></script>
+    <script src="static/js/script.js"></script>
 </body>
 </html>

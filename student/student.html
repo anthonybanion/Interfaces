@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="static/css/globalStyle.css">
+    <link rel="stylesheet" href="static/css/form.css">
     <title>Student Management</title>
 </head>
 <body>
     <header class="header">
         <h1 class="header__title">Student Management</h1>
     </header>
-
     <nav class="browser">
         <ul class="browser__pages">
             <li class="browser__items"><a class="browser__link" href="student.html">Student</a></li>
@@ -18,19 +18,16 @@
             <li class="browser__items"><a class="browser__link" href="searchStudent.html">Search student</a></li>
         </ul>
     </nav>
-
-    <main>
+    <main class="main">
         <section class="form-container">
             <form action="" class="form">
                 <input class="form__input" type="text"  id="form__name" placeholder="Name">
-                <input class="form__input" type="text"  id="form__last-name" placeholder="Last Name">
+                <input class="form__input" type="text"  id="form__lastName" placeholder="Last Name">
                 <input class="form__input" type="text"  id="form__dni" placeholder="Dni">
                 <input class="form__input" type="email" id="form__email" placeholder="Email">
                 <input class="form__input" type="text"  id="form__phone" placeholder="Phone">
                 <input class="form__input" type="text"  id="form__address" placeholder="Address">
                 <input class="form__button" type="button" value="Add Student" onclick="addStudent(this.form)">
-                <a href="listStudents.html"><input class="form__button" type="button" value="List students"></a>
-                <a href="searchStudent.html"><input class="form__button" type="button" value="Search student"></a>
             </form>
         </section>
 
@@ -42,10 +39,10 @@
 
     <footer class="footer">
             <ul class="footer__pages">
-                <li class="footer__items"><a class="footer__link" href="http://www.i12.com.ar/i12/"><img class="footer__img" src="assets/img/i12.png" alt="5px"></a></li>
-                <li class="footer__items"><a class="footer__link" href="https://github.com/anthonybanion"><img class="footer__img" src="assets/img/github.jpg" alt="5px"></a></li>
+                <li class="footer__items"><a class="footer__link" href="http://www.i12.com.ar/i12/"><img class="footer__img" src="static/img/i12.png" alt="5px"></a></li>
+                <li class="footer__items"><a class="footer__link" href="https://github.com/anthonybanion"><img class="footer__img" src="static/img/github.jpg" alt="5px"></a></li>
             </ul>
     </footer>
-    <script src="assets/js/script.js"></script>
+    <script src="static/js/script.js"></script>
 </body>
 </html>
