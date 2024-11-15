@@ -26,20 +26,26 @@
     color: var(--text-color);
 }
 
+
 .table__title-row{
     font-size: 1 rem;
     font-weight: 600;
     padding: 1em 0;
 }
 
-
-.table__data{
+.table__body{
     background-color: var(--primary-color);
     color: var(--text-color);
-    padding-left: 1.5rem;
-    
 }
 
+/* .table__data{
+    
+} */
+
+.table__input{
+    width: 50%;
+    height: 80%;
+}
 
 .table__button{
     padding: 0.5em 0.5em;
@@ -48,6 +54,7 @@
     border-radius: 0.5em;
     cursor: pointer;
     transition: background-color 0.3s;
+    display:inline;
 }
 
 

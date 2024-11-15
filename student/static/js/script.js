@@ -1,5 +1,5 @@
 // Array global para almacenar los estudiantes
-let students = JSON.parse(localStorage.getItem('students')) || []; // Usamos directamente `students` desde localStorage al inicio.
+let students = JSON.parse(localStorage.getItem('students')) || []; 
 
 // Función para agregar un estudiante al array de estudiantes
 function addStudent(form) {
@@ -87,73 +87,69 @@ function cleanStudent(student) {
 
 // Función para modificar (editar) un estudiante
 function modifyStudent(student) {
-    // Esta es solo una estructura básica, puedes personalizarla según tus necesidades
-    // Por ejemplo, puedes usar un formulario modal para editar los datos del estudiante
-    const modal = document.createElement('div');
-    modal.classList.add('modal');
+    const index = students.indexOf(student);
 
-    const form = document.createElement('form');
-    form.classList.add('modal__form');
+    // Seleccionar la fila que corresponde al estudiante
+    const tableBody = document.getElementById('table__body');
+    const row = tableBody.children[index];
+    
+    // Limpiar la fila para reemplazar sus celdas con inputs
+    row.innerHTML = '';
 
-    // Create input fields for each property of the student
+    // Crear inputs para cada campo del estudiante
     for (const key in student) {
-        const label = document.createElement('label');
-        label.textContent = key;
+        const cell = document.createElement('td');
+        cell.classList.add('table__data');
+
         const input = document.createElement('input');
         input.type = 'text';
         input.value = student[key];
-        input.name = key;
-        label.appendChild(input);
-        form.appendChild(label);
+        input.classList.add('table__input');
+        input.dataset.key = key;  // Usamos dataset para saber qué propiedad se está editando
+
+        cell.appendChild(input);
+        row.appendChild(cell);
     }
 
-    // Create submit button
-    const submitButton = document.createElement('input');
-    submitButton.type = 'submit';
-    submitButton.value = 'Save';
-    form.appendChild(submitButton);
+    // Crear celda para los botones "Guardar" y "Cancelar"
+    const buttonCell = document.createElement('td');
+    buttonCell.classList.add('table__data');
 
-    // Add form to modal
-    modal.appendChild(form);
+    // Botón "Guardar" para confirmar los cambios
+    const saveButton = document.createElement('input');
+    saveButton.type = 'button';
+    saveButton.value = 'Save';
+    saveButton.classList.add('table__button');
+    saveButton.onclick = () => saveStudent(index, row);
 
-    // Add modal to the document body
-    document.body.appendChild(modal);
+    // Botón "Cancelar" para deshacer cambios
+    const cancelButton = document.createElement('input');
+    cancelButton.type = 'button';
+    cancelButton.value = 'Cancel';
+    cancelButton.classList.add('table__button');
+    cancelButton.onclick = showStudents;  // Simplemente recarga la tabla
 
-    // Handle form submission
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
+    buttonCell.appendChild(saveButton);
+    buttonCell.appendChild(cancelButton);
+    row.appendChild(buttonCell);
+}
 
-        // Update student object with form values
-        for (const key in student) {
-            student[key] = form.elements[key].value;
-        }
+// Función para guardar los cambios realizados en un estudiante
+function saveStudent(index, row) {
+    // Recuperar el estudiante en el índice dado
+    const student = students[index];
 
-        // Update localStorage and show updated table
-        localStorage.setItem('students', JSON.stringify(students));
-        showStudents();
-
-        // Remove modal from the document body
-        document.body.removeChild(modal);
+    // Actualizar los datos del estudiante con los valores de los inputs
+    Array.from(row.querySelectorAll('input.table__input')).forEach(input => {
+        const key = input.dataset.key;
+        student[key] = input.value;
     });
-
-
-
-    // const name = prompt("Edit Name:", student.name);
-    // if (name !== null) {
-    //     student.name = name;
-    // }
-
-    // const lastName = prompt("Edit Last Name:", student.lastName);
-    // if (lastName !== null) {
-    //     student.lastName = lastName;
-    // }
-
-    // Deberías seguir para las otras propiedades, como `dni`, `email`, `phone`, `address`, etc.
 
     // Actualizar el array y `localStorage`
     localStorage.setItem('students', JSON.stringify(students));
-    showStudents(); // Actualizar la tabla con los nuevos valores
+    
+    // Volver a mostrar la tabla con los nuevos valores
+    showStudents();
 }
 
-// Inicializar la tabla con los estudiantes guardados en `localStorage`
 showStudents();
