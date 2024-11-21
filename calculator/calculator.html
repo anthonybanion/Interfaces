@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="static/css/calculator.css">
+</head>
+<body>
+	<main>
+    <section class="calculator">
+        <div class="calcular_screen" id="calcular_screen">0</div>
+        <div class="calculator__buttons">
+            <button class="calculator__button" onclick="limpiar()">C</button>
+            <button class="calculator__button" onclick="borrar()">←</button>
+            <button class="calculator__button" onclick="operar('/')">/</button>
+            <button class="calculator__button" onclick="operar('*')">*</button>
+
+            <button class="calculator__button" onclick="ingresar('7')">7</button>
+            <button class="calculator__button" onclick="ingresar('8')">8</button>
+            <button class="calculator__button" onclick="ingresar('9')">9</button>
+            <button class="calculator__button" onclick="operar('-')">-</button>
+
+            <button class="calculator__button" onclick="ingresar('4')">4</button>
+            <button class="calculator__button" onclick="ingresar('5')">5</button>
+            <button class="calculator__button" onclick="ingresar('6')">6</button>
+            <button class="calculator__button" onclick="operar('+')">+</button>
+
+            <button class="calculator__button" onclick="ingresar('1')">1</button>
+            <button class="calculator__button" onclick="ingresar('2')">2</button>
+            <button class="calculator__button" onclick="ingresar('3')">3</button>
+			<button class="calculator__button" onclick="ingresar('.')">.</button>
+            <button class="calculator__button equal" onclick="calcular()">=</button>
+            <button class="calculator__button zero" onclick="ingresar('0')">0</button>
+           
+        </div>
+    </section>
+	</main>
+    <script src="static/js/calculator.js"></script>
+</body>
+</html>
