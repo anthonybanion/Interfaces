@@ -3,7 +3,7 @@
 ## Description  
 This project showcases three cards, each featuring a different application:  
 1. **Password Generator**  
-2. **Expense Tracker**  
+2. **Expense Control**  
 3. **Basic Calculator**  
 
 ## Features  
@@ -13,7 +13,7 @@ This project showcases three cards, each featuring a different application:
 - Include a "Clear" button to reset the password field.  
 - Implement a validation system to notify the user if the generated password is strong or weak (e.g., if it lacks numbers or uppercase letters), displaying an appropriate message.  
 
-### 2. Expense Tracker  
+### 2. Expense Control  
 - Generate an alert when a recorded expense exceeds $150.  
 - Add a new field to include a more detailed description of each expense.  
 - Add a button to edit registered expenses.  
