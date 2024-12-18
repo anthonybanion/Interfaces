@@ -1,3 +1,4 @@
+/* General */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,104 +7,105 @@
 }
 
 body {
-    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%); 
-    height: 100vh;
-    width: 1400px;
-    display: flex; 
-    flex-wrap: wrap;
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    min-height: 100vh; /* Asegura que el contenido ocupe la altura completa */
+    display: flex;
+    flex-direction: column; /* Apila los elementos en columna */
     font-family: sans-serif;
     font-size: 1rem;
 }
 
+/* Header */
 .header {
     width: 100%;
     height: 15%;
     background: #041832;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 4rem;
 }
 
-.header__logo-container{
+.header__logo-container {
     width: 5%;
     height: 80%;
 }
 
-.header__logo{
+.header__logo {
     width: 100%;
     height: 100%;
 }
 
-.header__title-container{  
+.header__title-container {
     width: 30%;
     height: 80%;
 }
 
-.header__title{
+.header__title {
     font-size: 4rem;
     font-weight: bold;
     margin-left: 1rem;
 }
 
-
+/* Main */
 .main {
+    flex: 1; /* Permite que el main crezca para ocupar el espacio disponible */
     width: 100%;
-    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.main__card-containers{
+.main__card-containers {
     width: 60%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en móviles */
+    gap: 1rem;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    align-items:center;
-    justify-content:space-between;
+    align-items: center;
+    justify-content: space-between;
     width: 15rem;
     height: 18rem;
     background: #000000;
     border-radius: 0.5rem;
-    box-shadow: 0px 1px 10px rgba(49, 21, 150, 0.2); 
-    cursor: default;  /* cursor: pointer; */
-    transition: all 400ms ease;  /* transition: all 0.5s ease; */
+    box-shadow: 0px 1px 10px rgba(49, 21, 150, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
 }
 
-.card:hover{
+.card:hover {
     box-shadow: 5px 5px 20px rgba(143, 125, 209, 0.2);
     transform: translateY(-3%);
 }
 
-.card__header{
+.card__header {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #041832;
-    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.card__img{
-    background-image: element();
+.card__img {
     width: 100%;
     height: 100%;
-    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 0.5rem;
 }
 
-.card__footer{
+.card__footer {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     background: #041832;
-    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
 }
-
 
 .card__button {
     text-decoration: none;
@@ -121,22 +123,23 @@ body {
     background-color: #4cae4c;
 }
 
-footer{
+/* Footer */
+.footer {
     width: 100%;
     height: 15%;
     background: #01080E;
-
-}
-
-.footer__pages{
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
+    margin-top: auto; /* Empuja el footer hacia el fondo */
 }
 
-.footer__items{
+.footer__pages {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__items {
     list-style-type: none;
 }
 
@@ -147,9 +150,68 @@ footer{
 .footer__img {
     width: 3rem;
     height: 3rem;
+    transition: transform 0.3s;
 }
 
 .footer__img:hover {
-    width: 3.5rem;
-    height: 3.5rem;
+    transform: scale(1.2); /* Suaviza el cambio de tamaño */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .header__logo-container {
+        width: 20%;
+        height: auto;
+    }
+
+    .header__title-container {
+        width: 80%;
+        text-align: center;
+    }
+
+    .header__title {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+
+    .main__card-containers {
+        width: 90%;
+        flex-direction: column; 
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 60%;
+        height: auto;
+    }
+
+    .card__img {
+        height: 12rem;
+    }
+
+    footer {
+        height: auto; 
+    }
+
+    .footer__pages {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .footer__img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .footer__img:hover {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
 }

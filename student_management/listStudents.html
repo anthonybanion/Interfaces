@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/globalStyle.css">
+    <link rel="stylesheet" href="static/css/table.css">
+    <title>List students</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">List students</h1>
+    </header>
+    <nav class="browser">
+        <ul class="browser__pages">
+            <li class="browser__items"><a class="browser__link" href="studentManagement.html">Student</a></li>
+            <li class="browser__items"><a class="browser__link" href="listStudents.html">List students</a></li>
+            <li class="browser__items"><a class="browser__link" href="searchStudent.html">Search student</a></li>
+        </ul>
+    </nav>
+    <main class="main">
+        <section class="table-container">
+            <table class="table">
+                <thead class="table__head">
+                    <tr class="table__title-row">
+                        <th class="table__title-head">Name</th>
+                        <th class="table__title-head">Last Name</th>
+                        <th class="table__title-head">Dni</th>
+                        <th class="table__title-head">Email</th>
+                        <th class="table__title-head">Phone</th>
+                        <th class="table__title-head">Address</th>
+                        <th class="table__title-head">Buttons</th>
+                    </tr>
+                </thead>
+                <tbody class="table__body" id="table__body">
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer class="footer">
+        <ul class="footer__pages">
+            <li class="footer__items"><a class="footer__link" href="http://www.i12.com.ar/i12/"><img class="footer__img" src="static/img/i12.png" alt="5px"></a></li>
+            <li class="footer__items"><a class="footer__link" href="https://github.com/anthonybanion"><img class="footer__img" src="static/img/github.jpg" alt="5px"></a></li>
+        </ul>
+    </footer>
+    <script src="static/js/student.js"></script>
+</body>
+</html>
