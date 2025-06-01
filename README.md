@@ -7,18 +7,17 @@ Interactive Web Interfaces is a growing collection of modular web applications b
 The aim of this repository is to continuously develop and expand a suite of interactive web interfaces. Each interface is designed to function independently, demonstrating specific functionalities and design patterns. The collective gallery provides an organized and accessible way to explore each application.
 
 ## 🧩 Features
-
-1. Password Generator
+- Password Generator
   - Includes special symbols (!@#$%^&\*()) for stronger password creation.
   - "Clear" button to reset the password field.
   - Validation system to assess password strength, notifying users if the password is weak (e.g., lacks numbers or uppercase letters).
 
-2. Expense Control
+- Expense Control
   - Alerts when a recorded expense exceeds $150.
   - Additional field for detailed expense descriptions.
   - Edit functionality for registered expenses.
 
-3. Basic Calculator
+- Basic Calculator
   - Performs basic arithmetic operations: addition, subtraction, multiplication, and division.
 
 ## 🛠️ Technologies Used
