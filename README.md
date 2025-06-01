@@ -9,19 +9,17 @@ The aim of this repository is to continuously develop and expand a suite of inte
 ## 🧩 Features
 
 1. Password Generator
-
-- Includes special symbols (!@#$%^&\*()) for stronger password creation.
-- "Clear" button to reset the password field.
-- Validation system to assess password strength, notifying users if the password is weak (e.g., lacks numbers or uppercase letters).
+  - Includes special symbols (!@#$%^&\*()) for stronger password creation.
+  - "Clear" button to reset the password field.
+  - Validation system to assess password strength, notifying users if the password is weak (e.g., lacks numbers or uppercase letters).
 
 2. Expense Control
-- Alerts when a recorded expense exceeds $150.
-- Additional field for detailed expense descriptions.
-- Edit functionality for registered expenses.
+  - Alerts when a recorded expense exceeds $150.
+  - Additional field for detailed expense descriptions.
+  - Edit functionality for registered expenses.
 
 3. Basic Calculator
-
-- Performs basic arithmetic operations: addition, subtraction, multiplication, and division.
+  - Performs basic arithmetic operations: addition, subtraction, multiplication, and division.
 
 ## 🛠️ Technologies Used
 
