@@ -15,10 +15,9 @@ The aim of this repository is to continuously develop and expand a suite of inte
 - Validation system to assess password strength, notifying users if the password is weak (e.g., lacks numbers or uppercase letters).
 
 2. Expense Control
-
-   - Alerts when a recorded expense exceeds $150.
-   - Additional field for detailed expense descriptions.
-   - Edit functionality for registered expenses.
+- Alerts when a recorded expense exceeds $150.
+- Additional field for detailed expense descriptions.
+- Edit functionality for registered expenses.
 
 3. Basic Calculator
 
@@ -55,16 +54,12 @@ Interfaces/
 ## 🚀 Getting Started
 
 No installation is required. To explore the applications:
-
-    1. Navigate to the Live Demo hosted on GitHub Pages.
-    2. Click on any application card to interact with the respective interface.
+  1. Navigate to the Live Demo hosted on GitHub Pages.
+  2. Click on any application card to interact with the respective interface.
 
 ## 📄 License
 
 This project is licensed under the GPL License.
 
 ## 🔗 Additional Links
-
-    Live Demo: Interactive Web Interfaces on GitHub Pages
-
-    GitHub Repository: Interactive Web Interfaces Repository
+- **Live Demo:** [Interactive Web Interfaces on GitHub Pages](https://anthonybanion.github.io/Interfaces/)
