@@ -59,9 +59,9 @@ No installation is required. To explore the applications:
     1. Navigate to the Live Demo hosted on GitHub Pages.
     2. Click on any application card to interact with the respective interface.
 
-## 📄 License
+## 📝 License
 
-This project is licensed under the GPL License.
+This project is licensed under the [MIT License](./LICENSE).
 
 ## 🔗 Additional Links
 
